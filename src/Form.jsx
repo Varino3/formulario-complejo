@@ -47,16 +47,6 @@ function Form() {
         setFormData({ ...formData, [name]: value });
     };
 
-    const handleSubOption1Change = (e) => {
-        const { name, value } = e.target;
-        setFormData({ ...formData, [name]: value });
-    };
-
-    const handleSubOption2Change = (e) => {
-        const { name, value } = e.target;
-        setFormData({ ...formData, [name]: value });
-    };
-
     // Respuesta al pulsa el botón de enviar
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -113,7 +103,7 @@ function Form() {
                     {/* Campo tipo texto */}
                     <label htmlFor="email">Correo Electrónico: </label>
                     <input
-                        type="text"
+                        type="email"
                         id="email"
                         name="email"
                         value={formData.email}
@@ -154,10 +144,10 @@ function Form() {
                             id="subOption1"
                             name="subOption1"
                             value={formData.subOption1}
-                            onChange={handleSubOption1Change}
+                            onChange={handleOptionChange}
                         >
-                            <option value="A">Teclado y Ratón</option>
-                            <option value="B">Mando</option>
+                            <option value="p0">Teclado y Ratón</option>
+                            <option value="p1">Mando</option>
                         </select>
                     </div>
                 )}
@@ -169,10 +159,10 @@ function Form() {
                             id="subOption2"
                             name="subOption2"
                             value={formData.subOption2}
-                            onChange={handleSubOption2Change}
+                            onChange={handleOptionChange}
                         >
-                            <option value="X">PlayStation</option>
-                            <option value="Y">Xbox</option>
+                            <option value="c0">PlayStation</option>
+                            <option value="c1">Xbox</option>
                         </select>
                     </div>
                 )}
