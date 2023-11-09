@@ -1,9 +1,9 @@
 import React from "react";
-import './App.css'
+import '../App.css'
 
 function MostrarDatos({ formData }) {
     return (
-        <div>
+        <div id="datos">
             <h2>Mostrar datos:</h2>
             <p>Videojuegos favoritos: {formData.selectedItems.join(", ")}</p>
             <p>Correo electrónico: {formData.email}</p>
